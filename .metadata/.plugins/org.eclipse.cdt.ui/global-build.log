@@ -1,121 +1,105 @@
-23:28:34 **** Incremental Build of configuration Debug for project I2C_LCD_test1 ****
+23:45:42 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:139:6: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
-  139 |      itoa(x, snum, 10);
-      |      ^~~~
-../Core/Src/main.c:129:8: warning: unused variable 'x' [-Wunused-variable]
-  129 |    int x;
-      |        ^
-arm-none-eabi-gcc -o "I2C_LCD_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\I2C_LCD_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_LCD_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: I2C_LCD_test1.elf
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "OLED_I2C_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\OLED_I2C_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OLED_I2C_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: OLED_I2C_test1.elf
  
-arm-none-eabi-size  I2C_LCD_test1.elf 
-arm-none-eabi-objdump -h -S I2C_LCD_test1.elf  > "I2C_LCD_test1.list"
+arm-none-eabi-size  OLED_I2C_test1.elf 
+arm-none-eabi-objdump -h -S OLED_I2C_test1.elf  > "OLED_I2C_test1.list"
    text	   data	    bss	    dec	    hex	filename
-  15920	     36	   1812	  17768	   4568	I2C_LCD_test1.elf
+  25260	     36	   2836	  28132	   6de4	OLED_I2C_test1.elf
 Finished building: default.size.stdout
  
-Finished building: I2C_LCD_test1.list
+Finished building: OLED_I2C_test1.list
  
-23:29:12 **** Incremental Build of configuration Debug for project I2C_scanner ****
+23:45:55 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
+make -j16 all 
+arm-none-eabi-size  OLED_I2C_test1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25260	     36	   2836	  28132	   6de4	OLED_I2C_test1.elf
+Finished building: default.size.stdout
+ 
+23:48:08 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "I2C_scanner.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\I2C_scanner\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_scanner.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: I2C_scanner.elf
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "OLED_I2C_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\OLED_I2C_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OLED_I2C_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: OLED_I2C_test1.elf
  
-arm-none-eabi-size  I2C_scanner.elf 
-arm-none-eabi-objdump -h -S I2C_scanner.elf  > "I2C_scanner.list"
+arm-none-eabi-size  OLED_I2C_test1.elf 
+arm-none-eabi-objdump -h -S OLED_I2C_test1.elf  > "OLED_I2C_test1.list"
    text	   data	    bss	    dec	    hex	filename
-  14204	     36	   1812	  16052	   3eb4	I2C_scanner.elf
+  25260	     36	   2324	  27620	   6be4	OLED_I2C_test1.elf
 Finished building: default.size.stdout
  
-Finished building: I2C_scanner.list
+Finished building: OLED_I2C_test1.list
  
-23:29:50 **** Incremental Build of configuration Debug for project I2C_LCD_test1 ****
-make -j16 all 
-arm-none-eabi-size  I2C_LCD_test1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15920	     36	   1812	  17768	   4568	I2C_LCD_test1.elf
-Finished building: default.size.stdout
- 
-23:33:04 **** Incremental Build of configuration Debug for project I2C_LCD_test1 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:101:8: warning: unused variable 'x' [-Wunused-variable]
-  101 |    int x;
-      |        ^
-arm-none-eabi-gcc -o "I2C_LCD_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\I2C_LCD_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_LCD_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: I2C_LCD_test1.elf
- 
-arm-none-eabi-size  I2C_LCD_test1.elf 
-arm-none-eabi-objdump -h -S I2C_LCD_test1.elf  > "I2C_LCD_test1.list"
-   text	   data	    bss	    dec	    hex	filename
-  15156	     36	   1812	  17004	   426c	I2C_LCD_test1.elf
-Finished building: default.size.stdout
- 
-Finished building: I2C_LCD_test1.list
- 
-23:35:00 **** Incremental Build of configuration Debug for project I2C_LCD_test1 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:16: warning: unused variable 'x' [-Wunused-variable]
-  109 |            int x;
-      |                ^
-arm-none-eabi-gcc -o "I2C_LCD_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\I2C_LCD_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_LCD_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: I2C_LCD_test1.elf
- 
-arm-none-eabi-size  I2C_LCD_test1.elf 
-arm-none-eabi-objdump -h -S I2C_LCD_test1.elf  > "I2C_LCD_test1.list"
-   text	   data	    bss	    dec	    hex	filename
-  15156	     36	   1812	  17004	   426c	I2C_LCD_test1.elf
-Finished building: default.size.stdout
- 
-Finished building: I2C_LCD_test1.list
- 
-23:35:23 **** Incremental Build of configuration Debug for project I2C_LCD_test1 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:16: warning: unused variable 'x' [-Wunused-variable]
-  109 |            int x;
-      |                ^
-arm-none-eabi-gcc -o "I2C_LCD_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\I2C_LCD_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_LCD_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: I2C_LCD_test1.elf
- 
-arm-none-eabi-size  I2C_LCD_test1.elf 
-arm-none-eabi-objdump -h -S I2C_LCD_test1.elf  > "I2C_LCD_test1.list"
-   text	   data	    bss	    dec	    hex	filename
-  15152	     36	   1812	  17000	   4268	I2C_LCD_test1.elf
-Finished building: default.size.stdout
- 
-Finished building: I2C_LCD_test1.list
- 
-23:35:52 **** Incremental Build of configuration Debug for project I2C_LCD_test1 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:16: warning: unused variable 'x' [-Wunused-variable]
-  109 |            int x;
-      |                ^
-arm-none-eabi-gcc -o "I2C_LCD_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\I2C_LCD_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_LCD_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: I2C_LCD_test1.elf
- 
-arm-none-eabi-size  I2C_LCD_test1.elf 
-arm-none-eabi-objdump -h -S I2C_LCD_test1.elf  > "I2C_LCD_test1.list"
-   text	   data	    bss	    dec	    hex	filename
-  15152	     36	   1812	  17000	   4268	I2C_LCD_test1.elf
-Finished building: default.size.stdout
- 
-Finished building: I2C_LCD_test1.list
- 
-23:40:43 **** Incremental Build of configuration Debug for project I2C_scanner ****
+23:49:12 **** Incremental Build of configuration Debug for project I2C_scanner ****
 make -j16 all 
 arm-none-eabi-size  I2C_scanner.elf 
    text	   data	    bss	    dec	    hex	filename
   14204	     36	   1812	  16052	   3eb4	I2C_scanner.elf
 Finished building: default.size.stdout
+ 
+23:50:05 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
+make -j16 all 
+arm-none-eabi-size  OLED_I2C_test1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25260	     36	   2324	  27620	   6be4	OLED_I2C_test1.elf
+Finished building: default.size.stdout
+ 
+23:50:46 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "OLED_I2C_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\OLED_I2C_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OLED_I2C_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: OLED_I2C_test1.elf
+ 
+arm-none-eabi-size  OLED_I2C_test1.elf 
+arm-none-eabi-objdump -h -S OLED_I2C_test1.elf  > "OLED_I2C_test1.list"
+   text	   data	    bss	    dec	    hex	filename
+  25260	     36	   2324	  27620	   6be4	OLED_I2C_test1.elf
+Finished building: default.size.stdout
+ 
+Finished building: OLED_I2C_test1.list
+ 
+23:52:19 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:98:14: warning: unused variable 'snum' [-Wunused-variable]
+   98 |         char snum[5];
+      |              ^~~~
+arm-none-eabi-gcc -o "OLED_I2C_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\OLED_I2C_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OLED_I2C_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: OLED_I2C_test1.elf
+ 
+arm-none-eabi-size  OLED_I2C_test1.elf 
+arm-none-eabi-objdump -h -S OLED_I2C_test1.elf  > "OLED_I2C_test1.list"
+   text	   data	    bss	    dec	    hex	filename
+  19876	     28	   2324	  22228	   56d4	OLED_I2C_test1.elf
+Finished building: default.size.stdout
+ 
+Finished building: OLED_I2C_test1.list
+ 
+23:52:59 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
+make -j16 all 
+arm-none-eabi-size  OLED_I2C_test1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19876	     28	   2324	  22228	   56d4	OLED_I2C_test1.elf
+Finished building: default.size.stdout
+ 
+23:53:32 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "OLED_I2C_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\OLED_I2C_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OLED_I2C_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: OLED_I2C_test1.elf
+ 
+arm-none-eabi-size  OLED_I2C_test1.elf 
+arm-none-eabi-objdump -h -S OLED_I2C_test1.elf  > "OLED_I2C_test1.list"
+   text	   data	    bss	    dec	    hex	filename
+  19840	     28	   2324	  22192	   56b0	OLED_I2C_test1.elf
+Finished building: default.size.stdout
+ 
+Finished building: OLED_I2C_test1.list
  

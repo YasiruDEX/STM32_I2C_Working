@@ -1,0 +1,17 @@
+23:53:32 **** Incremental Build of configuration Debug for project OLED_I2C_test1 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "OLED_I2C_test1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yasir\Documents\GitHub\STM32_I2C_Working\OLED_I2C_test1\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OLED_I2C_test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: OLED_I2C_test1.elf
+ 
+arm-none-eabi-size  OLED_I2C_test1.elf 
+arm-none-eabi-objdump -h -S OLED_I2C_test1.elf  > "OLED_I2C_test1.list"
+   text	   data	    bss	    dec	    hex	filename
+  19840	     28	   2324	  22192	   56b0	OLED_I2C_test1.elf
+Finished building: default.size.stdout
+ 
+Finished building: OLED_I2C_test1.list
+ 
+
+23:53:32 Build Finished. 0 errors, 0 warnings. (took 755ms)
+
